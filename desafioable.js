@@ -22,12 +22,12 @@ const vagasAndar1 = andar1.filter(item => item < 1).length
 const vagasOcupadasC3 = corredor3.filter(item => item === 1).length
 const vagasOcupadasC4 = corredor4.filter(item => item === 1).length
 const vagasAndar2 = andar2.filter(item => item < 1).length
-const totalValordasVagas = (vagasOcpC1 + vagasOcpC2 + vagasOcpC3 + vagasOcpC4) * valorVaga
+const totalValordasVagas = (vagasOcupadasC1 + vagasOcupadasC2 + vagasOcupadasC3 + vagasOcupadasC4) * valorVaga
 
-console.log(`O corredor 1 deste prédio possui ${vagasOcpC1} vaga(s) ocupada(s)`)
-console.log(`O corredor 2 deste prédio possui ${vagasOcpC2} vaga(s) ocupada(s)`)
-console.log(`O corredor 3 deste prédio possui ${vagasOcpC3} vaga(s) ocupada(s)`)
-console.log(`O corredor 4 deste prédio possui ${vagasOcpC4} vaga(s) ocupada(s)`)
+console.log(`O corredor 1 deste prédio possui ${vagasOcupadasC1} vaga(s) ocupada(s)`)
+console.log(`O corredor 2 deste prédio possui ${vagasOcupadasC2} vaga(s) ocupada(s)`)
+console.log(`O corredor 3 deste prédio possui ${vagasOcupadasC3} vaga(s) ocupada(s)`)
+console.log(`O corredor 4 deste prédio possui ${vagasOcupadasC4} vaga(s) ocupada(s)`)
 console.log(`O andar 1 possui ${vagasAndar1} vaga(s) livre(s)`)
 console.log(`O andar 2 possui ${vagasAndar2} vaga(s) livre(s)`)
 console.log(`Este edifício garagem arrecadou um total de R$ ${totalValordasVagas}`)
