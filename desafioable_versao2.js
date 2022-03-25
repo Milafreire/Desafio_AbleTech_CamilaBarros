@@ -9,20 +9,26 @@ const edGaragem = [andar1, andar2]
 const valorVaga = 10
 
 //Criação de um novo array de elementos para tornar mais simples.
-corredor0 = []
+const corredor0 = [0]
 const corredores = new Array(corredor0, corredor1, corredor2, corredor3, corredor4)
+
 //Função para filtrar as vagas ocupadas
 const vagasOcupadasNoCorredor = (corredores) => corredores.filter(corredor => corredor === 1).length
+
 //Array resultante das vagas ocupadas por corredor
 const arrayVagasOcupadas = corredores.map(vagasOcupadasNoCorredor)
+
 //Total de vagas ocupadas em todos corredores
 const totalVagasOcupadas = arrayVagasOcupadas.reduce((a, b) => a + b, 0)
-//Valor total arrecadado em $ no EdGaragem
+
+//Valor total arrecadado em R$ no EdGaragem
 const valorTotal = totalVagasOcupadas * valorVaga
-//Valor de vagas livres no corredor1
+
+//Valor de vagas livres no andar1
 const VagasTotaisPrimeiroAndar = corredor1.concat(corredor2)
 const VagasLivresPrimeiroAndar = VagasTotaisPrimeiroAndar.filter(item => item < 1).length
-//Valor de vagas livres no corredor2
+
+//Valor de vagas livres no andar2
 const VagasTotaisSegundoAndar = corredor3.concat(corredor4)
 const VagasLivresSegundoAndar = VagasTotaisSegundoAndar.filter(item => item < 1).length
 
