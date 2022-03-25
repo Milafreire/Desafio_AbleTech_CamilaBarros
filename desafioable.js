@@ -1,7 +1,6 @@
 /* Trabalharemos com um edifício garagem, onde cada andar terá corredores e
 cada corredor terá vagas, vagas com o número 1 estão ocupadas e vagas com o
 número 0 estão livres. Cada vaga ocupada custa o valor de 10 Reais.
-
 - Dado um corredor, retornar o total de vagas ocupadas
 - Dado um andar, retornar o total de vagas livre
 - Dado um edifício garagem, retornar o valor total arrecadado
