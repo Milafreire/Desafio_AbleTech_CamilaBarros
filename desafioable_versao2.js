@@ -24,13 +24,15 @@ const totalVagasOcupadas = arrayVagasOcupadas.reduce((a, b) => a + b, 0)
 //Valor total arrecadado em R$ no EdGaragem
 const valorTotal = totalVagasOcupadas * valorVaga
 
+//Function para calcular a quantidade de vagas livres em cada corredor
+function pegarVagasLivresPorAndar(primeiroCorredor, segundoCorredor) {
+  return primeiroCorredor.concat(segundoCorredor).filter(item => item < 1).length
+}
 //Valor de vagas livres no andar1
-const VagasTotaisPrimeiroAndar = corredor1.concat(corredor2)
-const VagasLivresPrimeiroAndar = VagasTotaisPrimeiroAndar.filter(item => item < 1).length
+const VagasLivresPrimeiroAndar = pegarVagasLivresPorAndar(corredor1, corredor2)
 
 //Valor de vagas livres no andar2
-const VagasTotaisSegundoAndar = corredor3.concat(corredor4)
-const VagasLivresSegundoAndar = VagasTotaisSegundoAndar.filter(item => item < 1).length
+const VagasLivresSegundoAndar = pegarVagasLivresPorAndar(corredor3, corredor4)
 
 //Resultados
 console.log('Resultados: ')
